@@ -1,0 +1,63 @@
+request: 
+	Success:
+		array(2) {
+		["data"]=>
+		array(5) {
+			["code"]=>
+    			int(100)
+    			["message"]=>
+    			string(7) "Success"
+    			["authority"]=>
+    			string(36) "A00000000000000000000000000383735441"
+    			["fee_type"]=>
+    			string(8) "Merchant"
+    			["fee"]=>
+    			int(25)
+  			}
+  			["errors"]=>
+  			array(0) {
+  			}
+		}
+	Err:
+	["data"]=>
+		array(0) {}
+	
+  ["errors"]=>
+  array(3) {
+    ["code"]=>
+    int(-9)
+    ["message"]=>
+    string(43) "The input params invalid, validation error."
+    ["validations"]=>
+    array(2) {
+      [0]=>
+      array(1) {
+        ["merchant_id"]=>
+        string(54) "The merchant id may not be greater than 36 characters."
+      }
+      [1]=>
+      array(1) {
+        ["merchant_id"]=>
+        string(27) "string is not a valid uuid."
+      }
+    }
+  }
+  }
+  
+  
+verify:
+	success:
+	array (size=2)
+  'data' => 
+    array (size=8)
+      'code' => int 100
+      'message' => string 'Paid' (length=4)
+      'card_hash' => string '113BA617EA68074E8BF056B861524305D0B7FEA5C1E295CBD1D092E7145C29FAD48C24C659A7E45B61EDB6D8DE5245B123DEF51DF7C2E55B048953EF8DFC756E' (length=128)
+      'card_pan' => string '504706******6829' (length=16)
+      'ref_id' => int 38374686101
+      'fee_type' => string 'Merchant' (length=8)
+      'fee' => int 25
+      'order_id' => null
+  'errors' => 
+    array (size=0)
+  
